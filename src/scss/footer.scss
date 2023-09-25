@@ -1,0 +1,221 @@
+.footer {
+
+    // .footer__container
+    &__container {
+        padding-top: 75px;
+        padding-bottom: 100px;
+
+        @media (max-width: ($md1+px)) {
+            padding-top: 65px;
+            padding-bottom: 90px;
+        }
+
+        @media (max-width: ($md2+px)) {
+            padding-top: 35px;
+            padding-bottom: 60px;
+        }
+    }
+
+    // .footer__body
+    &__body {
+
+        display: grid;
+        grid-template-columns: 351px 1fr 152px;
+        column-gap: 137px;
+
+        @media (max-width: ($md1+px)) {
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 152px;
+        }
+
+        @media (max-width: ($md3+px)) {
+            display: block;
+        }
+    }
+
+    // .footer__main
+    &__main {
+        @media (max-width: ($md1+px)) {
+            grid-column: span 2;
+            margin-bottom: 40px;
+        }
+    }
+
+    // .footer__logo
+    &__logo {
+        margin: 0px 0px 16px 0px;
+    }
+
+    // .footer__text
+    &__text {
+        color: $darkColor;
+        font-size: 16px;
+        line-height: 162.5%;
+        letter-spacing: 0.04px;
+        margin: 0px 0px 24px 0px;
+    }
+}
+
+.news-footer {
+
+    // .news-footer__title
+    &__title {
+        margin: 0px 0px 16px 0px;
+    }
+
+    // .news-footer__form
+    &__form {
+        min-height: 42px;
+        display: flex;
+    }
+
+    // .news-footer__input
+    &__input {
+        height: auto;
+        flex: 1 1 auto;
+        color: #D7D7D7;
+        line-height: 162.5%;
+        letter-spacing: 0.5px;
+        padding-left: 16px;
+    }
+
+    // .news-footer__button
+    &__button {
+        height: auto;
+        flex: 0 0 88px;
+        box-shadow: 0px 0px 65px 0px rgba(105, 185, 157, 0.48);
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0px 0px 65px 10px rgba(105, 185, 157, 0.48);
+            }
+        }
+    }
+}
+
+.menu-footer {
+
+    @media (min-width: ($md3+px)) {
+        display: flex;
+        justify-content: flex-end;
+        gap: 80px;
+    }
+
+    @media (max-width: ($md1+px)) {
+        justify-content: flex-start;
+    }
+
+    // .menu-footer__column
+    &__column {
+        @media (max-width: ($md3+px)) {
+            margin: 0px 0px 15px 0px;
+        }
+    }
+
+    // .menu-footer__title
+    &__title {
+        background-color: transparent;
+        cursor: default;
+
+        @media (min-width: ($md3+px)) {
+            margin: 0px 0px calc(16px/20px*1em) 0px;
+        }
+
+        ._init & {
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            @extend ._icon-arrow;
+
+            &::before {
+                @extend %ic;
+                font-size: 15px;
+                transition: transform .3s ease;
+            }
+        }
+
+        &._active {
+            &::before {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    // .menu-footer__list
+    &__list {
+        li {
+            &:not(:last-child) {
+                margin: 0px 0px 16px 0px;
+            }
+        }
+
+        @media (max-width: ($md3+px)) {
+            padding: 10px 0px 0px 0px;
+
+            li {
+                &:not(:last-child) {
+                    margin: 0px 0px 14px 0px;
+                }
+            }
+        }
+    }
+
+    // .menu-footer__link
+    &__link {
+        color: #575757;
+        font-family: DM Sans;
+        font-size: 16px;
+        line-height: 150%;
+        transition: color .3s ease;
+
+        @media (max-width: ($md3+px)) {
+            font-size: 17px;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $greenColor;
+            }
+        }
+    }
+}
+
+.social-footer {
+
+    // .social-footer__title
+    &__title {
+        margin: 0px 0px 16px 0px;
+    }
+
+    // .social-footer__icons
+    &__icons {
+        display: flex;
+
+        li {
+            height: 40px;
+            width: 40px;
+            background-color: #F8F9F9;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin: 0px 16px 0px 0px;
+            }
+        }
+    }
+
+    // .social-footer__icon
+    &__icon {
+        color: #29CDB5;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $greenColor;
+            }
+        }
+    }
+}

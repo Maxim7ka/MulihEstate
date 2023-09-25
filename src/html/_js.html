@@ -1,0 +1,22 @@
+<script src="js/app.min.js"></script>
+<script>
+    const burgerMenu = document.querySelector('.icon-menu');
+
+    burgerMenu.addEventListener('click', () => {
+        const burgerMenuBody = document.querySelector('.menu__body');
+
+        burgerMenu.classList.toggle('_active');
+        burgerMenuBody.classList.toggle('_active');
+    });
+
+    // function ibg() {
+    //     let ibg = document.querySelectorAll("._ibg");
+    //     for (var i = 0; i < ibg.length; i++) {
+    //         if (ibg[i].querySelector('img')) {
+    //             ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+    //         }
+    //     }
+    // }
+
+    // ibg();
+</script>
